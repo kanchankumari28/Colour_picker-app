@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Picker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Color Picker</h1>
+    
+    <div class="color-display" id="colorDisplay">
+      <div class="color-code" id="colorCode">#4285F4</div>
+    </div>
+    
+    <div class="controls">
+      <div class="control-group">
+        <h3>Color Picker</h3>
+        <label for="colorPicker">Select a color:</label>
+        <input type="color" id="colorPicker" value="#4285F4">
+        
+        <h3>Preset Colors</h3>
+        <div class="presets" id="presets">
+          <div class="preset-color" style="background-color: #FF0000" data-color="#FF0000"></div>
+          <div class="preset-color" style="background-color: #FF9900" data-color="#FF9900"></div>
+          <div class="preset-color" style="background-color: #FFFF00" data-color="#FFFF00"></div>
+          <div class="preset-color" style="background-color: #00FF00" data-color="#00FF00"></div>
+          <div class="preset-color" style="background-color: #00FFFF" data-color="#00FFFF"></div>
+          <div class="preset-color" style="background-color: #0000FF" data-color="#0000FF"></div>
+          <div class="preset-color" style="background-color: #9900FF" data-color="#9900FF"></div>
+          <div class="preset-color" style="background-color: #FF00FF" data-color="#FF00FF"></div>
+          <div class="preset-color" style="background-color: #000000" data-color="#000000"></div>
+          <div class="preset-color" style="background-color: #FFFFFF" data-color="#FFFFFF"></div>
+        </div>
+      </div>
+      
+      <div class="control-group">
+        <h3>RGB Sliders</h3>
+        <div class="slider-group">
+          <div class="slider-container">
+            <span>R</span>
+            <input type="range" min="0" max="255" value="66" id="redSlider">
+            <input type="number" min="0" max="255" value="66" id="redInput">
+          </div>
+          
+          <div class="slider-container">
+            <span>G</span>
+            <input type="range" min="0" max="255" value="133" id="greenSlider">
+            <input type="number" min="0" max="255" value="133" id="greenInput">
+          </div>
+          
+          <div class="slider-container">
+            <span>B</span>
+            <input type="range" min="0" max="255" value="244" id="blueSlider">
+            <input type="number" min="0" max="255" value="244" id="blueInput">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="buttons">
+      <button id="randomColor">Random Color</button>
+      <button id="copyColor">Copy Color Code</button>
+    </div>
+    
+    <div class="history">
+      <h3>Color History</h3>
+      <div class="history-colors" id="colorHistory"></div>
+    </div>
+  </div>
+  
+  <div class="toast" id="toast">Color code copied to clipboard!</div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
